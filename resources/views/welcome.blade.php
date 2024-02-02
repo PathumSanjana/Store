@@ -17,7 +17,7 @@
   
   <div class="container">
     <h2 class="mb-4 text-center">Student Registration Form</h2>
-    <form>
+    <form method="post" action="">
       <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" class="form-control" id="name" placeholder="Enter your name">
@@ -35,7 +35,7 @@
         <input type="date" class="form-control" id="birthday">
       </div>
       <div class="text-center"> 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Add Student</button>
       </div>
     </form>
   </div>
