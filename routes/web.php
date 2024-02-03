@@ -24,4 +24,5 @@ Route::get('/register', function () {
 
 Route::controller(StudentController::class)->group(function (){
     Route::get('/AddStudent','AddStudent');
+    Route::post('/SaveStudent','save')->name('student.save');
 });

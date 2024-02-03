@@ -16,23 +16,29 @@
 <body>
   
   <div class="container">
+    <div>
+      @if(Session::has('message'))
+         <p>{{Session::get('message')}}</p>
+      @endif
+    </div>
     <h2 class="mb-4 text-center">Student Registration Form</h2>
-    <form method="post" action="">
+    <form method="post" action="{{route('student.save')}}">
+      @csrf
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        <input type="text" class="form-control" id="name" name="stuName" placeholder="Enter your name">
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        <input type="email" class="form-control" id="email" name="stuEmail" placeholder="Enter your email">
       </div>
       <div class="form-group">
         <label for="address">Address:</label>
-        <input type="text" class="form-control" id="address" placeholder="Enter your address">
+        <input type="text" class="form-control" id="address" name="stuAddress" placeholder="Enter your address">
       </div>
       <div class="form-group">
         <label for="birthday">Birthday:</label>
-        <input type="date" class="form-control" id="birthday">
+        <input type="date" class="form-control" id="birthday" name="stuDob">
       </div>
       <div class="text-center"> 
         <button type="submit" class="btn btn-primary">Add Student</button>
